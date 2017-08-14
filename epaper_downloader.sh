@@ -7,7 +7,7 @@
 echo "Downloading webpage"
 #Download webpage
 wget "http://annapurnapost.com/epaper" -O /tmp/index.html -q 
-
+echo "Done"
 #We wanna grab the line <a href="http://annapurnapost.com/epaper/detail/465" title="Epaper Details"> which contains today's epaper link.
 paper=$(cat /tmp/index.html | grep -E 'Epaper.*Details');
 #remove the downloaded index file
@@ -19,6 +19,7 @@ link=$(cat /tmp/link.txt |grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*");
 
 rm -f /tmp/link.txt
 #Download the webpage of above captured link. It has all the images!
+echo "Finding links"
 wget "$link" -O /tmp/epaper.html -q
 #Search for links
 papers=$(cat /tmp/epaper.html | grep -Eo "(http|https)://[a-zA-Z0-9./?=_-]*")
@@ -29,7 +30,7 @@ imglink=$(cat /tmp/papers.txt | grep "epaper/2017")
 rm -f /tmp/papers.txt
 #Output the found URLs to a file which is used by wget to download the images in the given directory.
 echo "$imglink" > /tmp/imglink.txt
+echo "Dowloading epapers"
 wget -i /tmp/imglink.txt -P "$HOME/Desktop/AnnapurnaPost" -q
 rm -f /tmp/imglink.txt
 echo "Done. Check the folder AnnapurnaPost in your desktop!"
-
