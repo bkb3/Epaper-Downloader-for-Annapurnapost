@@ -4,7 +4,7 @@ Enough of these awful ads and unnecessary ****** on these media webpages. I want
 
 This script downloads a webpage, `grep`s to find the required links to epapers and `wget`s to the desktop folder "Annapurnapost". Enjoy at your own risk!
 
-Here's an screenshot of the script running. Also keep in mind that I've removed `-q` (quiet) option for `wget` to demonstrate.
-![N|Solid](https://i.imgur.com/55gB8zA.png)
+Here's an screenshot of the script running. Nothing much to see though :D
+![N|Solid](https://i.imgur.com/wFGsRDy.png)
 
 Suggestions, PRs very welcome!
