@@ -29,7 +29,7 @@ imglink=$(cat /tmp/papers.txt | grep "epaper/2017")
 rm -f /tmp/papers.txt
 #Output the found URLs to a file which is used by wget to download the images in the given directory.
 echo "$imglink" > /tmp/imglink.txt
-wget -i /tmp/imglink.txt -P "$HOME/Desktop/AnnapurnaPost"
+wget -i /tmp/imglink.txt -P "$HOME/Desktop/AnnapurnaPost" -q
 rm -f /tmp/imglink.txt
 echo "Done. Check the folder AnnapurnaPost in your desktop!"
 
