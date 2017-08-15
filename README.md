@@ -4,6 +4,9 @@ Enough of these awful ads and unnecessary ****** on these media webpages. I want
 
 This script downloads a webpage, `grep`s to find the required links to epapers and `wget`s to the desktop folder "Annapurnapost". Enjoy at your own risk!
 
+#HOW TO
+Download the source code and save it somewhere. Then use `chmod x /path/to/the/file`. Then double click that file and everything will be done automagically!
+
 Here's an screenshot of the script running. Nothing much to see though :D
 ![N|Solid](https://i.imgur.com/JE2BADI.png)
 
