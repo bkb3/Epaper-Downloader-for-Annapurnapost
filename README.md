@@ -6,7 +6,7 @@ This script downloads a webpage, `grep`s to find the required links to epapers a
 
 # HOW TO
   - Download the source code and save it somewhere.
-  - `chmod x /path/to/the/file`.
+  - `chmod +x /path/to/the/file`.
   - Double click that file and everything will be done automagically!
 
 You can also add a  `cron` job to run the script automatically but be aware that they don't upload new paper early everyday. You might just have an old paper for a few days.
